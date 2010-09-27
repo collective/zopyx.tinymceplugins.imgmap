@@ -4,8 +4,6 @@
     i18n_domain="zopyx.imgmap">
 
   <!-- File System Directory Views registration -->
-  <cmf:registerDirectory name="zopyx_imgmap_custom_images"/>
-  <cmf:registerDirectory name="zopyx_imgmap_custom_templates"/>
-  <cmf:registerDirectory name="zopyx_imgmap_styles"/>
+  <cmf:registerDirectory name="zopyx_tinymceplugins_imgmap" recursive="True" />
 
 </configure>
