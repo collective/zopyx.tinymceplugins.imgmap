@@ -12,7 +12,7 @@
       />
 
   <genericsetup:importStep
-      name="zopyx.imgmap.various"
+      name="zopyx.tinymceplugins.imgmap.various"
       title="zopyx_tinymceplugins_imgmap: miscellaneous import steps"
       description="Various import steps that are not handled by GS import/export handlers."
       handler="zopyx.imgmap.setuphandlers.setupVarious">
