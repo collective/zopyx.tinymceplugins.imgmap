@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="zopyx_tinymceplugins_imgmap">
+
+ <object name="zopyx_imgmap_custom_images"
+    meta_type="Filesystem Directory View"
+    directory="zopyx.imgmap:skins/zopyx_imgmap_custom_images"/>
+ <object name="zopyx_imgmap_custom_templates"
+    meta_type="Filesystem Directory View"
+    directory="zopyx.imgmap:skins/zopyx_imgmap_custom_templates"/>
+ <object name="zopyx_imgmap_styles"
+    meta_type="Filesystem Directory View"
+    directory="zopyx.imgmap:skins/zopyx_imgmap_styles"/>
+
+ <skin-path name="zopyx_tinymceplugins_imgmap" based-on="Plone Default">
+  <layer name="zopyx_imgmap_custom_images"
+     insert-after="custom"/>
+  <layer name="zopyx_imgmap_custom_templates"
+     insert-after="zopyx_imgmap_custom_images"/>
+  <layer name="zopyx_imgmap_styles"
+     insert-after="zopyx_imgmap_custom_templates"/>
+ </skin-path>
+
+</object>

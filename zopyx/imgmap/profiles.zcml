@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="zopyx.imgmap">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="zopyx_tinymceplugins_imgmap"
+      directory="profiles/default"
+      description='Extension profile for the "zopyx_tinymceplugins_imgmap" Plone theme.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="zopyx.imgmap.various"
+      title="zopyx_tinymceplugins_imgmap: miscellaneous import steps"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler="zopyx.imgmap.setuphandlers.setupVarious">
+    <depends name="skins"/>
+  </genericsetup:importStep>
+
+</configure>
