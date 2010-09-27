@@ -15,8 +15,8 @@
 
 				ed.windowManager.open({
 					file : url + '/popup.html',
-					width : 700,
-					height : 560,
+					width : 800,
+					height : 650,
 					inline : 1
 				}, {
 					plugin_url : url

@@ -333,10 +333,10 @@ function gui_addArea(id) {
 	temp+= '<option value="circle"    >circle</option>';
 	temp+= '<option value="poly"   >polygon</option>';
 	temp+= '</select>';
-	temp+= 'Coords: <input type="text" name="img_coords" class="img_coords" value="">';
-	temp+= 'Href: <input type="text" name="img_href" class="img_href" value="">';
-	temp+= 'Alt: <input type="text" name="img_alt" class="img_alt" value="">';
-	temp+= 'Target: <select name="img_target" class="img_target">';
+	temp+= '&nbsp;Coords: <input type="text" name="img_coords" class="img_coords" value="">';
+	temp+= '&nbsp;Href: <input type="text" name="img_href" class="img_href" value="" style="width: 150px">';
+	temp+= '&nbsp;Alt: <input type="text" name="img_alt" class="img_alt" value="">';
+	temp+= '&nbsp;Target: <select name="img_target" class="img_target">';
 	temp+= '<option value=""  >&lt;not set&gt;</option>';
 	temp+= '<option value="_self"  >this window</option>';
 	temp+= '<option value="_blank" >new window</option>';
@@ -539,5 +539,4 @@ function gui_zoom() {
 	pic.height = pic.oldheight * scale;
 	myimgmap.scaleAllAreas(scale);
 }
-
 
