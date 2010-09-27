@@ -5,6 +5,22 @@ This module allows you to edit image maps inside the TinyMCE editor
 in Plone 4.0 or higher.
 
 The code is based on the ``imgmap`` plugin for TinyMCE.
+See http://code.google.com/p/imgmap for details.
+
+Installation
+============
+As with every Plone add-on: add ``zopyx.tinymceplugins.imgmap`` to the ``eggs``
+and ``zcml`` options of your buildout configuration.
+
+Configuration
+=============
+Right now you have to ``map`` and ``area`` manually to the list of allowed 
+HTML tags inside the Plone control panel for HTML filtering.
+
+Usage
+=====
+Inside TinyMCE you have to select an image inside the editor window and choose
+the imagemap icon from the toolbar of TinyMCE.
 
 License
 =======
