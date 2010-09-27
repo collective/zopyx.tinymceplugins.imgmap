@@ -5,9 +5,9 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="zopyx_tinymceplugins_imgmap"
+      title="Imagemap editor plugin for TinyMCE"
       directory="profiles/default"
-      description='Extension profile for the "zopyx_tinymceplugins_imgmap" Plone theme.'
+      description='Adding support to edit imagemaps through TinyMCE'
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
