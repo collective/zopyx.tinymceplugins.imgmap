@@ -10,7 +10,7 @@ See http://code.google.com/p/imgmap for details.
 Installation
 ============
 As with every Plone add-on: add ``zopyx.tinymceplugins.imgmap`` to the ``eggs``
-and ``zcml`` options of your buildout configuration.
+option of your buildout configuration and re-run buildout.
 
 Configuration
 =============
