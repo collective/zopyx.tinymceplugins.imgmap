@@ -1,12 +1,14 @@
 Changelog
 =========
 
+0.2.1 (unreleased)
+------------------
+- added @@getAnchorsAsJson() view
+
 0.2.0 (2010-10-10)
 -------------------
-
 - fixed some packaging issues 
 
 0.1.0 (2010-09-27)
 -------------------
-
 - Initial release
