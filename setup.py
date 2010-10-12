@@ -25,6 +25,7 @@ setup(name='zopyx.tinymceplugins.imgmap',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'demjson',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
