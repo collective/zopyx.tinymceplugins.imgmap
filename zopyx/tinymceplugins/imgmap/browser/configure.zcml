@@ -28,10 +28,10 @@
       />
 
   <browser:page
-    for="Products.ATContentTypes.interfaces.IATDocument"
+    for="Products.ATContentTypes.interfaces.document.IATDocument"
     name="getAnchorsAsJson"
     class=".document.AnchorView"
-    permission="zope.View"
+    permission="zope2.View"
     />
 
 </configure>
