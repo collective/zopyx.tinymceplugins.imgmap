@@ -9,7 +9,7 @@ from Products.PloneTestCase import PloneTestCase as ptc
 from Products.PloneTestCase.layer import PloneSite
 ptc.setupPloneSite()
 
-import zopyx.imgmap
+import zopyx.tinymceplugins.imgmap
 
 
 class TestCase(ptc.PloneTestCase):
@@ -19,7 +19,7 @@ class TestCase(ptc.PloneTestCase):
         @classmethod
         def setUp(cls):
             fiveconfigure.debug_mode = True
-            ztc.installPackage(zopyx.imgmap)
+            ztc.installPackage(zopyx.tinymceplugins.imgmap)
             fiveconfigure.debug_mode = False
 
         @classmethod
@@ -32,21 +32,21 @@ def test_suite():
 
         # Unit tests
         #doctestunit.DocFileSuite(
-        #    'README.txt', package='zopyx.imgmap',
+        #    'README.txt', package='zopyx.tinymceplugins.imgmap',
         #    setUp=testing.setUp, tearDown=testing.tearDown),
 
         #doctestunit.DocTestSuite(
-        #    module='zopyx.imgmap.mymodule',
+        #    module='zopyx.tinymceplugins.imgmap.mymodule',
         #    setUp=testing.setUp, tearDown=testing.tearDown),
 
 
         # Integration tests that use PloneTestCase
         #ztc.ZopeDocFileSuite(
-        #    'README.txt', package='zopyx.imgmap',
+        #    'README.txt', package='zopyx.tinymceplugins.imgmap',
         #    test_class=TestCase),
 
         #ztc.FunctionalDocFileSuite(
-        #    'browser.txt', package='zopyx.imgmap',
+        #    'browser.txt', package='zopyx.tinymceplugins.imgmap',
         #    test_class=TestCase),
 
         ])
