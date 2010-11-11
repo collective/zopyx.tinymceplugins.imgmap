@@ -1,12 +1,9 @@
 
-import demjson
 import BeautifulSoup
 from Products.Five.browser import BrowserView
 
-
 class AnchorView(BrowserView):
-    """ Returns all anchors as JSON data structure """
-
+    """ Returns all anchors as list of dicts (keys=name|text)"""
 
     def __call__(self):
         """ return all anchors """
@@ -22,5 +19,5 @@ class AnchorView(BrowserView):
 
             if name:
                 result.append(dict(name=name, text=name))
-        return demjson.encode(result) 
+        return result
                                 
