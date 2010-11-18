@@ -3,7 +3,7 @@ Changelog
 
 0.3.0 (2010-11-18)
 ------------------
-- added @@getAnchorsAsJson() view
+- added @@getAnchors() view
 - added ``Anchors`` fieldset for accessing the list of anchors in the underlaying 
   document (works only for ATDocument instance) 
   [ajung, d2m]
