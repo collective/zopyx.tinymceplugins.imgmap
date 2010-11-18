@@ -1,11 +1,17 @@
 
 import BeautifulSoup
 from Products.Five.browser import BrowserView
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 class AnchorView(BrowserView):
     """ Returns all anchors as list of dicts (keys=name|text)"""
 
-    def __call__(self):
+    template = ViewPageTemplateFile('document_anchors.pt')
+
+    def __call__(self, *args, **kw):
+        return self.template()
+
+    def getAnchors(self):
         """ return all anchors """
 
         html = self.context.getText()

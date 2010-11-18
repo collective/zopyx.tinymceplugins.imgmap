@@ -1,7 +1,9 @@
-<ul id="anchors" tal:define="result view/getAnchors">
-    <li tal:repeat="result results">
+<ul id="anchors" tal:define="results view/getAnchors" style="display: block; height: 200px; overflow: auto;">
+    <li tal:repeat="result results" style="display: block">
         <a tal:content="result/name"
             tal:attributes="onclick string:gui_anchorSet('#${result/name}')"
         />
+        <br/>
     </li>
+    <li tal:condition="not: results">No anchors</li>
 </ul>
