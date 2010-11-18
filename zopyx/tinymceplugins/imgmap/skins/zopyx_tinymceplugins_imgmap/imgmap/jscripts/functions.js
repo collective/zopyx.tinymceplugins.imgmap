@@ -6,7 +6,7 @@ var map_obj = null;
 var props = [];
 
 function init() {
-	
+
 	tinyMCEPopup.resizeToInnerSize();
 	//tinyMCE.setWindowArg('mce_windowresize', true);//i guess we dont need this
 
@@ -55,6 +55,22 @@ function init() {
 			}
 		}
 	}
+	var _parent = editor.contentWindow.parent.location.href;
+    var _anchors = document.getElementById('anchors_container');
+	_anchors.innerHTML = gui_loadAnchorsHtml(_parent + '/../@@getAnchors');
+	// alert(_parent + '/../@@anchor_view');
+}
+
+function gui_loadAnchorsHtml(url) {
+	// load anchors from view @@getAnchors view
+
+    var request = new XMLHttpRequest();
+    request.open('get', url, false);
+    request.send(null);
+    if (request.status == 200)
+        return request.responseText;
+    else
+        return 'An error occurred';
 }
 
 function updateAction() {
@@ -302,12 +318,15 @@ function gui_input_change(e) {
 			myimgmap.nextShape = obj.value;
 		}
 	}
-	if (myimgmap.areas[id] && myimgmap.areas[id].shape != 'undefined') {
-		myimgmap._recalculate(id, props[id].getElementsByTagName('input')[2].value);
-		myimgmap.fireEvent('onHtmlChanged', myimgmap.getMapHTML());//temp ## shouldnt be here
-	}
+	gui_recalculateHTML(id);
 };
 
+function gui_recalculateHTML(id) {
+    if (myimgmap.areas[id] && myimgmap.areas[id].shape != 'undefined') {
+        myimgmap._recalculate(id, props[id].getElementsByTagName('input')[2].value);
+        myimgmap.fireEvent('onHtmlChanged', myimgmap.getMapHTML());//temp ## shouldnt be here
+    }	
+}
 /**
  *	Called from imgmap when a new area is added.
  */
@@ -334,7 +353,9 @@ function gui_addArea(id) {
 	temp+= '<option value="poly"   >polygon</option>';
 	temp+= '</select>';
 	temp+= '&nbsp;Coords: <input type="text" name="img_coords" class="img_coords" value="">';
-	temp+= '&nbsp;Href: <input type="text" name="img_href" class="img_href" value="" style="width: 150px">';
+    temp+= '&nbsp;Href: <input type="text" id="img_href_' + id + '" name="img_href" class="img_href" value="" style="width: 150px">';
+    //temp+= '&nbsp;<a href="javascript:alert(\'Anchors\');">[A]</a> ';
+    temp+= '<img src="images/add.gif" onclick="gui_anchorsShow()" alt="Show anchors" title="Show anchors"/>';
 	temp+= '&nbsp;Alt: <input type="text" name="img_alt" class="img_alt" value="">';
 	temp+= '&nbsp;Target: <select name="img_target" class="img_target">';
 	temp+= '<option value=""  >&lt;not set&gt;</option>';
@@ -482,8 +503,24 @@ function gui_htmlFocus() {
 };
 
 function gui_htmlShow() {
-	toggleFieldset(document.getElementById('fieldset_html'), 1);
-	document.getElementById('html_container').focus();
+    toggleFieldset(document.getElementById('fieldset_html'), 1);
+    document.getElementById('html_container').focus();
+}
+
+function gui_anchorsShow() {
+    toggleFieldset(document.getElementById('fieldset_anchors'), 1);
+    document.getElementById('anchors_container').focus();
+}
+
+function gui_anchorSet(str) { 
+	var id = myimgmap.currentid;
+	var img_href_id = document.getElementById('img_href_' + id);
+	img_href_id.value = str;
+    toggleFieldset(document.getElementById('fieldset_anchors'), 0);
+	// img_href_id.onchange();
+	// sollte eigentlich von gui_input_change erledigt werden :(, aber onchange funktioniert nicht
+	myimgmap.areas[img_href_id.parentNode.aid].ahref   = img_href_id.value;
+    gui_recalculateHTML(id);
 }
 
 /**

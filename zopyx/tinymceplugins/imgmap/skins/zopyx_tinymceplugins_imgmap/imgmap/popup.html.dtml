@@ -54,13 +54,20 @@
 			<!-- form elements come here -->
 		 	</div>
 		</fieldset>
-		<fieldset>
-			<legend>
-				<a onclick="toggleFieldset(this.parentNode.parentNode)">Image</a>
-			</legend>
-			<div id="pic_container">
-			</div>			
-		</fieldset>
+        <fieldset id="fieldset_anchors" class="fieldset_off">
+            <legend>
+                <a onclick="toggleFieldset(this.parentNode.parentNode)">Anchors</a>
+            </legend>
+            <div id="anchors_container">
+            </div>          
+        </fieldset>
+        <fieldset>
+            <legend>
+                <a onclick="toggleFieldset(this.parentNode.parentNode)">Image</a>
+            </legend>
+            <div id="pic_container">
+            </div>          
+        </fieldset>
 		<fieldset>
 			<legend>
 				<a onclick="toggleFieldset(this.parentNode.parentNode)">Status</a>

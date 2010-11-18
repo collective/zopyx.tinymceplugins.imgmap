@@ -1,9 +1,11 @@
 Changelog
 =========
 
-0.2.1 (unreleased)
+0.3.0 (2010-11-18)
 ------------------
 - added @@getAnchorsAsJson() view
+- added ``Anchors`` fieldset for accessing the list of anchors in the underlaying 
+  document (works only for ATDocument instance)
 
 0.2.0 (2010-10-10)
 -------------------
