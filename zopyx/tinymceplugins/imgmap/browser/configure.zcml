@@ -29,7 +29,7 @@
 
   <browser:page
     for="Products.ATContentTypes.interfaces.document.IATDocument"
-    name="getAnchorsAsJson"
+    name="getAnchors"
     class=".document.AnchorView"
     permission="zope2.View"
     />
