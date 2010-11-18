@@ -1,0 +1,7 @@
+<ul id="anchors" tal:define="result view/getAnchors">
+    <li tal:repeat="result results">
+        <a tal:content="result/name"
+            tal:attributes="onclick string:gui_anchorSet('#${result/name}')"
+        />
+    </li>
+</ul>
