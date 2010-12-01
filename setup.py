@@ -25,6 +25,7 @@ setup(name='zopyx.tinymceplugins.imgmap',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'BeautifulSoup',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

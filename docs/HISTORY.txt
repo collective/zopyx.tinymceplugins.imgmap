@@ -1,6 +1,11 @@
 Changelog
 =========
 
+after 0.3.0
+-----------
+- added dependency to BeautifulSoup
+  [fRiSi]
+  
 0.3.0 (2010-11-18)
 ------------------
 - added @@getAnchors() view
