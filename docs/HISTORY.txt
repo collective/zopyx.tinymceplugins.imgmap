@@ -5,6 +5,8 @@ after 0.3.0
 -----------
 - added dependency to BeautifulSoup
   [fRiSi]
+- added French translation
+  [toutpt]
   
 0.3.0 (2010-11-18)
 ------------------
