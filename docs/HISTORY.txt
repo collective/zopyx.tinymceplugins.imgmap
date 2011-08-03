@@ -1,23 +1,23 @@
 Changelog
 =========
 
-after 0.3.0
------------
+0.3.1 (2011-08-03)
+------------------
 - added dependency to BeautifulSoup
   [fRiSi]
 - added French translation
   [toutpt]
-  
+
 0.3.0 (2010-11-18)
 ------------------
 - added @@getAnchors() view
-- added ``Anchors`` fieldset for accessing the list of anchors in the underlaying 
-  document (works only for ATDocument instance) 
+- added ``Anchors`` fieldset for accessing the list of anchors in the underlaying
+  document (works only for ATDocument instance)
   [ajung, d2m]
 
 0.2.0 (2010-10-10)
 -------------------
-- fixed some packaging issues 
+- fixed some packaging issues
 
 0.1.0 (2010-09-27)
 -------------------

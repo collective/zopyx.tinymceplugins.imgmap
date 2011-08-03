@@ -14,7 +14,7 @@ option of your buildout configuration and re-run buildout.
 
 Configuration
 =============
-Right now you have to ``map`` and ``area`` manually to the list of allowed 
+Right now you have to ``map`` and ``area`` manually to the list of allowed
 HTML tags inside the Plone control panel for HTML filtering.
 
 Usage
@@ -38,3 +38,7 @@ Author
 | www.zopyx.com
 | info@zopyx.com
 
+Contributors:
+
+* Harald Friessnegger (fRiSi)
+* Jean Michel Francois (toutpt)
