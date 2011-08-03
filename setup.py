@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.3.1-wmdev'
+version = '0.3.0'
 
 setup(name='zopyx.tinymceplugins.imgmap',
       version=version,
