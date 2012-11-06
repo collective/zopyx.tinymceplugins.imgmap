@@ -1,6 +1,17 @@
 Changelog
 =========
 
+0.3.2 (2012-11-06)
+------------------
+
+- add the ``zopyx_tinymceplugins_imgmap`` leayer to every
+  skin defined in portal_skins on installation to
+  prevent people using the product from `getting confused`_
+  [fRiSi]
+
+  .. _`getting confused`: http://stackoverflow.com/questions/13227481/overriding-skins-xml-of-another-product
+
+
 0.3.1 (2011-08-03)
 ------------------
 - added dependency to BeautifulSoup

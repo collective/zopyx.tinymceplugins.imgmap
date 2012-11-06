@@ -5,11 +5,7 @@
     meta_type="Filesystem Directory View"
     directory="zopyx.tinymceplugins.imgmap:skins/zopyx_tinymceplugins_imgmap"/>
 
- <skin-path name="Plone Default">
-  <layer name="zopyx_tinymceplugins_imgmap"
-     insert-after="custom"/>
- </skin-path>
- <skin-path name="Sunburst Theme">
+ <skin-path name="*">
   <layer name="zopyx_tinymceplugins_imgmap"
      insert-after="custom"/>
  </skin-path>
