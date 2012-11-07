@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.3.2.1 (2012-11-07)
+--------------------
+
+- fix brown bag release (doc/ did not get added to the distribution
+  by zest.releaser)
+  
 0.3.2 (2012-11-06)
 ------------------
 
