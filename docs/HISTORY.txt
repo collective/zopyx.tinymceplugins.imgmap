@@ -4,8 +4,8 @@ Changelog
 0.3.2.1 (2012-11-07)
 --------------------
 
-- fix brown bag release (doc/ did not get added to the distribution
-  by zest.releaser)
+- fix brown bag release (docs/ did not get added to the distribution
+  by zest.releaser so we added it to MANIFEST.in)
   
 0.3.2 (2012-11-06)
 ------------------
