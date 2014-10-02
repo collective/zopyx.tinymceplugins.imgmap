@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.3.3 (Unreleased)
+------------------
+
+- Added italian JS translation
+  [keul]
+
 0.3.2.1 (2012-11-07)
 --------------------
 
