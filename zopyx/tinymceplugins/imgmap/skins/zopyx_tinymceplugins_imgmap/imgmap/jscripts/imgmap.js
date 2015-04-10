@@ -221,9 +221,7 @@ function imgmap(config) {
 	//browser sniff
 	var ua = navigator.userAgent;
 	this.isMSIE    = (navigator.appName == "Microsoft Internet Explorer");
-	this.isMSIE5   = this.isMSIE && (ua.indexOf('MSIE 5')   != -1);
-	this.isMSIE5_0 = this.isMSIE && (ua.indexOf('MSIE 5.0') != -1);
-	this.isMSIE7   = this.isMSIE && (ua.indexOf('MSIE 7')   != -1);
+	this.isMSIE10  = this.isMSIE && (ua.indexOf('Trident/6')   != -1);
 	this.isGecko   = ua.indexOf('Gecko')  != -1;
 	this.isSafari  = ua.indexOf('Safari') != -1;
 	this.isOpera   = (typeof window.opera != 'undefined');
@@ -1865,8 +1863,20 @@ imgmap.prototype.img_mousemove = function(e) {
 	//event.x is relative to parent element, but page.x is NOT
 	//pos coordinates are the same absolute coords, offset coords are relative to parent
 	var pos = this._getPos(this.pic);
-	x = (this.isMSIE) ? (window.event.x - this.pic.offsetLeft) : (e.pageX - pos.x);
-	y = (this.isMSIE) ? (window.event.y - this.pic.offsetTop)  : (e.pageY - pos.y);
+    if (this.isMSIE) {
+        x = window.event.x;
+        y = window.event.y;
+    } else {
+        x = e.pageX;
+        y = e.pageY;
+    }
+    if ((! this.isMSIE) || this.isMSIE10){
+        x = x - pos.x;
+        y = y - pos.y;
+    } else {
+        x = x - this.pic.offsetLeft;
+        y = y - this.pic.offsetTop;
+    }
 	x = x + this.pic_container.scrollLeft;
 	y = y + this.pic_container.scrollTop;
 	
@@ -2118,8 +2128,20 @@ imgmap.prototype.img_mouseup = function(e) {
 	//console.log('img_mouseup');
 	//if (!this.props[this.currentid]) return;
 	var pos = this._getPos(this.pic);
-	var x = (this.isMSIE) ? (window.event.x - this.pic.offsetLeft) : (e.pageX - pos.x);
-	var y = (this.isMSIE) ? (window.event.y - this.pic.offsetTop)  : (e.pageY - pos.y);
+    if (this.isMSIE) {
+        x = window.event.x;
+        y = window.event.y;
+    } else {
+        x = e.pageX;
+        y = e.pageY;
+    }
+    if ((! this.isMSIE) || this.isMSIE10){
+        x = x - pos.x;
+        y = y - pos.y;
+    } else {
+        x = x - this.pic.offsetLeft;
+        y = y - this.pic.offsetTop;
+    }
 	x = x + this.pic_container.scrollLeft;
 	y = y + this.pic_container.scrollTop;
 	//for everything that is move or resize
@@ -2156,8 +2178,20 @@ imgmap.prototype.img_mousedown = function(e) {
 	//console.log('img_mousedown');
 	var pos = this._getPos(this.pic);
 
-	var x = (this.isMSIE) ? (window.event.x - this.pic.offsetLeft) : (e.pageX - pos.x);
-	var y = (this.isMSIE) ? (window.event.y - this.pic.offsetTop)  : (e.pageY - pos.y);
+    if (this.isMSIE) {
+        x = window.event.x;
+        y = window.event.y;
+    } else {
+        x = e.pageX;
+        y = e.pageY;
+    }
+    if ((! this.isMSIE) || this.isMSIE10){
+        x = x - pos.x;
+        y = y - pos.y;
+    } else {
+        x = x - this.pic.offsetLeft;
+        y = y - this.pic.offsetTop;
+    }
 	x = x + this.pic_container.scrollLeft;
 	y = y + this.pic_container.scrollTop;
 	
