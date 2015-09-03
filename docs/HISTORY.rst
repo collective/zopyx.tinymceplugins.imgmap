@@ -7,6 +7,9 @@ Changelog
 - Added italian JS translation
   [keul]
 
+- Updated imgmap to work better with IE10. Maybe has still problems with IE11
+  [do3cc]
+
 0.3.2.1 (2012-11-07)
 --------------------
 
